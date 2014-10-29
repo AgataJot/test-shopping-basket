@@ -1,0 +1,240 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// @import "compass/reset";
+@import "compass";
+@import "compass/layout/sticky-footer";
+@import "susy";
+@import "sprites/*.png";
+@include all-sprites-sprites;
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+@include sticky-footer(40px, "#main", "#pushFoter", "#footer");
+$dark-grey: #999999;
+$light-grey: #dddddd;
+
+$susy: (
+  columns: 7,
+  gutters: 20px/60px,
+
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+  container-position: center,
+  gutter-position: split,
+  global-box-sizing: border-box
+);
+
+html {
+	font-size: 62.5%;
+}
+
+
+body { 
+	background-color: #dddddd;
+	@include background-image(linear-gradient(white 0%, #dddddd 100%));
+	background-repeat: no-repeat;
+	@include font-size(1.4);
+	font-family: 'Droid Serif', sans-serif;
+	font-style: normal;
+}
+
+.main {
+  @include container(580px);
+  width: span(7);
+  @include clearfix; 
+}
+
+header, section {
+  margin: 0 gutter();
+  @include clearfix;
+
+}
+
+h1 {
+	@include sprites-sprite(logo);
+	height: sprites-sprite-height(logo);
+	width: sprites-sprite-width(logo);
+	text-indent: -4000px;
+	margin-bottom: span(1);
+	margin-top: span(1);
+}
+
+h2 {
+	@include font-size(3);
+	@include text-shadow(rgba(#000000, 0.2) 2px 2px 0);
+	font-family: 'Droid Serif', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.basket-descr {
+	width: span(6 of 7);
+	margin-bottom: span(1);
+}
+
+.product-list {
+	padding: 0;
+	margin-bottom: span(1);
+	li {
+		@include font-size(1.8);
+		display: block;
+		clear: both;
+		padding-bottom: 0.5em;
+		padding-top: 0.5em;
+		@include clearfix;
+		& span:first-child {
+			padding-left: gutter();
+			margin-right: - gutter();
+		}
+		&.active {
+			background-color: $light-grey;
+		}
+
+		&.li-heading {
+			font-weight: 700;
+			line-height: 2em;
+			border-bottom: 2px solid $dark-grey;
+		}
+	}
+
+	.product-name {
+		float: left;
+		width: span(3 of 7);
+		padding-right: gutter(3);
+	}
+
+	.product-price,
+	.product-qunatity-cont, 
+	.product-cost {
+		float: left;
+		display: block;
+		width: span(1 of 7);
+		padding-right: gutter(3);
+		text-align: right;
+	}
+
+	.product-qunatity-cont {
+		@include container(3);
+		width: span(1 of 7);
+		&.invisible {
+			.quantity-controls {
+				display: none;
+			}
+			.input-product-quantity {
+				width: span(first 3 wide of 3);
+			}
+		}
+	}
+	.quantity-controls {
+		width: span(1 of 3 last);
+		float: left;
+
+		.add,
+		.substract {
+			text-align: center;
+			height: 0.6em;
+			line-height: 0.6em;
+			background-color: $dark-grey;
+			color: white;
+			cursor: pointer;
+			margin-bottom: 1px;
+		}
+	}
+
+	.input-product-quantity {
+		border: 1px solid $dark-grey;
+		line-height: 1.2em;
+		font-family: 'Droid Serif', sans-serif;
+		text-align: right;
+		display: block;
+		margin-top: 0;
+		width: span(first 2 of 3);
+		float: left;
+	}
+
+	.btn-remove {
+		@include sprites-sprite(trash);
+		height: sprites-sprite-height(trash);
+		width: sprites-sprite-width(trash);
+		text-indent: -4000px;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+
+		// hacks
+		text-indent: -4000px;
+		display: block;
+		line-height: 0px;
+		font-size: 0px;
+	}
+}
+
+.payment-totals {
+	@include clearfix;
+	@include font-size(1.8);
+
+	width: span(6 wide of 7);
+  	margin: 0 0 span(1) 0;
+	dt {
+		width: span(first 4 of 7);
+		float: left;
+		clear: both;
+
+		padding-left: gutter();
+	}
+	dd {
+		@include span(3 of 7 last);
+		text-align: right;
+	}
+
+	dt, dd {
+		color: $dark-grey;
+		&.total {
+			color: black;
+			margin-top: 2em;
+		}
+	}
+}
+
+.form-summary {
+	width: span(6 wide of 7);
+	@include clearfix;
+	margin-bottom: span(1);
+	padding: 5px 5px span(1) 5px;
+}
+
+.btn-submit {
+	background-color: #000066;
+	@include border-radius(10px);
+	@include box-shadow(rgba(#000000, 0.5) 3px 3px 3px);
+	color: white;
+	line-height: 1.6em;
+	@include font-size(2.1);
+	border: none;
+	font-family: 'Droid Sans', sans-serif;
+	font-style: normal;
+	padding: gutter();
+	float: right;
+	cursor: pointer;
+}
+
+.footer {
+	background-color: #666666;
+	color: white;
+
+	.footer-content {
+		padding: 0.5em;
+  		@include container(580px);
+		font-family: 'Droid Sans', sans-serif;
+		font-style: normal;
+	}
+}

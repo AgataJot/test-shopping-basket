@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AKQA Test :: Agata Jewko</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="/stylesheets/normalize.css" media="screen, projection, print" rel="stylesheet" type="text/css" />
+        <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+        <script src="js/libs/modernizr-2.6.2.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:700%7CDroid+Serif:400,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="main" id="main">
+            <div class="header">
+                <h1>AKQA</h1>
+            </div>
+
+            <div class="section">
+                <h2>
+                    Your Basket
+                </h2>
+                <p class="basket-descr">Items you have added to your basket are shown below. Adjust the quantities or remove items before continuing your purchase.</p>
+            </div>
+
+            <div class="section">
+                <form id="cartForm" action="/" method="post">
+                    <ul class="product-list" id="productsList">
+                        <li class="li-heading">
+                            <span class="product-name">Product</span>
+                            <span class="product-price">Price</span>
+                            <span class="product-qunatity-cont">Qty</span>
+                            <span class="product-cost">Cost</span>
+                        </li>
+                        <li class="product">
+                            <label for="product1">
+                                <span class="product-name">Cotton T-Shirt, Medium:</span>
+                                <span class="product-price">£1.99</span>
+
+                                <div class="product-qunatity-cont">
+                                    <input class="input-product-quantity" name="product1" id="product1" type="number" min="1" max="10" step="1" value="1">
+                                    <div class="quantity-controls">
+                                        <div class="add">+</div>
+                                        <div class="substract">-</div>
+                                    </div>
+                                </div>
+
+                                <span class="product-cost"></span>
+                            </label>
+                            <input class="btn-remove" type="submit" name="remove" value="1">
+                        </li>
+                        <li class="product">
+                            <label for="product2">
+                                <span class="product-name">Baseball Cap, One Size:</span>
+                                <span class="product-price">£2.99</span>
+                                <div class="product-qunatity-cont">
+                                    <input class="input-product-quantity" name="product2" id="product2" type="number" min="1" max="10" step="1" value="1">
+                                    <div class="quantity-controls">
+                                        <div class="add">+</div>
+                                        <div class="substract">-</div>
+                                    </div>
+                                </div>
+                                <span class="product-cost"></span>
+                            </label>
+                            <input class="btn-remove" type="submit" name="remove" value="2">
+                        </li>
+                        <li class="product">
+                            <label for="product3">
+                                <span class="product-name">Swim Shorts, Medium:</span>
+                                <span class="product-price">£3.99</span>
+                                <div class="product-qunatity-cont">
+                                    <input class="input-product-quantity" name="product3" id="product3" type="number" min="1" max="10" step="1" value="1">
+                                    <div class="quantity-controls">
+                                        <div class="add">+</div>
+                                        <div class="substract">-</div>
+                                    </div>
+                                </div>
+                                <span class="product-cost"></span>
+                            </label>
+                            <input class="btn-remove" type="submit" name="remove" value="3">
+                        </li>
+                    </ul>
+                    <dl class="payment-totals">
+                        <dt>Subtotal</dt>
+                        <dd id="subtotal">£11.96</dd>
+                        <dt>VAT @ 20%</dt>
+                        <dd id="vat">£2.39</dd>
+                        <dt class="total">Total Cost</dt>
+                        <dd class="total" id="total">£14.35</dd>
+                    </dl>
+               
+                    <div class="form-summary">
+                        <input class="btn-submit" type="submit" name="calculate" value="Buy Now &raquo;">
+                    </div> 
+                </form>
+            </div>
+
+            <div id="pushFoter"></div>
+        </div>
+        <div class="footer" id="footer">
+            <div class="footer-content">&copy;AKQA Ltd. Registered in England: 2964394</div>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
