@@ -1,10 +1,6 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* line 56, sprites/*.png */
 .sprites-sprite, .sprites-logo, .sprites-trash, h1, .product-list .btn-remove {
-  background-image: url('/images/sprites-s5694bcf9e0.png');
+  background-image: url('../images/sprites-s5694bcf9e0.png');
   background-repeat: no-repeat;
 }
 
@@ -43,12 +39,12 @@ html, body {
   height: 40px;
 }
 
-/* line 36, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 html {
   font-size: 62.5%;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 body {
   background-color: #dddddd;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -64,7 +60,7 @@ body {
   font-style: normal;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 .main {
   max-width: 580px;
   margin-left: auto;
@@ -80,14 +76,14 @@ body {
   clear: both;
 }
 
-/* line 56, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 header, section {
   margin: 0 1.78571%;
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 62, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 h1 {
   background-position: 0 0;
   height: 48px;
@@ -97,7 +93,7 @@ h1 {
   margin-top: 10.71429%;
 }
 
-/* line 71, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 h2 {
   font-size: 30px;
   font-size: 3rem;
@@ -107,18 +103,18 @@ h2 {
   font-weight: 700;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .basket-descr {
   width: 82.14286%;
   margin-bottom: 10.71429%;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 .product-list {
   padding: 0;
   margin-bottom: 10.71429%;
 }
-/* line 87, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 .product-list li {
   font-size: 18px;
   font-size: 1.8rem;
@@ -129,28 +125,28 @@ h2 {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 94, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 .product-list li span:first-child {
   padding-left: 1.78571%;
   margin-right: -1.78571%;
 }
-/* line 98, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 .product-list li.active {
   background-color: #dddddd;
 }
-/* line 102, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 .product-list li.li-heading {
   font-weight: 700;
   line-height: 2em;
   border-bottom: 2px solid #999999;
 }
-/* line 109, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .product-list .product-name {
   float: left;
   width: 39.28571%;
   padding-right: 4.16667%;
 }
-/* line 115, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .product-list .product-price,
 .product-list .product-qunatity-cont,
 .product-list .product-cost {
@@ -160,7 +156,7 @@ h2 {
   padding-right: 4.16667%;
   text-align: right;
 }
-/* line 125, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 .product-list .product-qunatity-cont {
   max-width: 100%;
   margin-left: auto;
@@ -173,20 +169,20 @@ h2 {
   display: block;
   clear: both;
 }
-/* line 129, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 .product-list .product-qunatity-cont.invisible .quantity-controls {
   display: none;
 }
-/* line 132, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 .product-list .product-qunatity-cont.invisible .input-product-quantity {
   width: 100%;
 }
-/* line 137, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 .product-list .quantity-controls {
   width: 25%;
   float: left;
 }
-/* line 141, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 .product-list .quantity-controls .add,
 .product-list .quantity-controls .substract {
   text-align: center;
@@ -197,7 +193,7 @@ h2 {
   cursor: pointer;
   margin-bottom: 1px;
 }
-/* line 153, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 .product-list .input-product-quantity {
   border: 1px solid #999999;
   line-height: 1.2em;
@@ -208,7 +204,7 @@ h2 {
   width: 58.33333%;
   float: left;
 }
-/* line 164, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 .product-list .btn-remove {
   background-position: 0 -48px;
   height: 22px;
@@ -223,7 +219,7 @@ h2 {
   font-size: 0px;
 }
 
-/* line 181, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 .payment-totals {
   overflow: hidden;
   *zoom: 1;
@@ -232,14 +228,14 @@ h2 {
   width: 85.71429%;
   margin: 0 0 10.71429% 0;
 }
-/* line 187, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .payment-totals dt {
   width: 53.57143%;
   float: left;
   clear: both;
   padding-left: 1.78571%;
 }
-/* line 194, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 .payment-totals dd {
   width: 39.28571%;
   float: right;
@@ -247,17 +243,17 @@ h2 {
   margin-right: 1.78571%;
   text-align: right;
 }
-/* line 199, ../sass/screen.scss */
+/* line 194, ../sass/screen.scss */
 .payment-totals dt, .payment-totals dd {
   color: #999999;
 }
-/* line 201, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 .payment-totals dt.total, .payment-totals dd.total {
   color: black;
   margin-top: 2em;
 }
 
-/* line 208, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 .form-summary {
   width: 85.71429%;
   overflow: hidden;
@@ -266,7 +262,7 @@ h2 {
   padding: 5px 5px 10.71429% 5px;
 }
 
-/* line 215, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 .btn-submit {
   background-color: #000066;
   -moz-border-radius: 10px;
@@ -287,12 +283,12 @@ h2 {
   cursor: pointer;
 }
 
-/* line 230, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 .footer {
   background-color: #666666;
   color: white;
 }
-/* line 234, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 .footer .footer-content {
   padding: 0.5em;
   max-width: 580px;
